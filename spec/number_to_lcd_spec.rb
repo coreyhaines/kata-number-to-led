@@ -33,7 +33,6 @@ describe NumberToLcd do
       it "converts 0" do
         NumberToLcd.convert(0).should == " - \n| |\n   \n| |\n - "
       end
-
     end
   end
 end
