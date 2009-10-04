@@ -113,9 +113,35 @@ LCD
   end
 
   context "multiple digits" do
-    it "converts 12"
-    it "converts 34"
-    it "converts 567"
-    it "converts 7890"
+    it "converts 12" do
+      expected = <<LCD
+   - 
+|   |
+   - 
+| |  
+   - 
+LCD
+      12.should convert_to(expected)
+    end
+    it "converts 345" do
+      expected = <<LCD
+ -       - 
+  | | | |  
+ -   -   - 
+  |   |   |
+ -       - 
+LCD
+      345.should convert_to(expected)
+    end
+    it "converts 67890" do
+      expected = <<LCD
+ -   -   -   -   - 
+|     | | | | | | |
+ -       -   -     
+| |   | | |   | | |
+ -       -   -   - 
+LCD
+      67890.should convert_to(expected)
+    end
   end
 end
