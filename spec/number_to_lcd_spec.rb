@@ -9,8 +9,6 @@ Spec::Matchers.define :convert_to do |expected|
   end
 end
 describe NumberToLcd do
-  def check_conversion(number, lcd)
-  end
   context "single digits" do
     it "converts 1" do
       expected = <<LCD
