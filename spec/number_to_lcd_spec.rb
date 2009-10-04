@@ -15,7 +15,13 @@ describe NumberToLcd do
       it "converts 4" do
         NumberToLcd.convert(4).should == "   \n| |\n - \n  |\n   "
       end
-        
+      it "converts 5" do
+        NumberToLcd.convert(5).should == " - \n|  \n - \n  |\n - "
+      end
+      it "converts 6" do
+        NumberToLcd.convert(6).should == " - \n|  \n - \n| |\n - "
+      end
+
     end
   end
 end

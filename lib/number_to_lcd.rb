@@ -5,7 +5,9 @@ class NumberToLcd
       1 => [:blank, :right, :blank, :right, :blank],
       2 => [:middle, :right, :middle, :left, :middle],
       3 => [:middle, :right, :middle, :right, :middle],
-      4 => [:blank, :left_and_right, :middle, :right, :blank]
+      4 => [:blank, :left_and_right, :middle, :right, :blank],
+      5 => [:middle, :left, :middle, :right, :middle],
+      6 => [:middle, :left, :middle, :left_and_right, :middle]
     }
     def convert(this_number)
       lines = LINES_FOR[this_number]
@@ -14,20 +16,15 @@ class NumberToLcd
     
     def lines_to_strings(lines)
       lines.map do |line_type|
-        send(line_type)
+        STRINGS_FOR_TYPE[line_type]
       end
     end
 
-    { :blank          => "   ",
+    STRINGS_FOR_TYPE = { :blank          => "   ",
       :left           => "|  ",
       :right          => "  |",
       :left_and_right => "| |",
       :middle         => " - "
-    }.each_pair do |key, string|
-      define_method(key) do
-        string
-      end
-    end
-    
+    }
   end
 end
