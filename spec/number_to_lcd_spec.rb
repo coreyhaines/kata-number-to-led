@@ -13,4 +13,11 @@ describe NumberToLcd do
     it "converts 9"
     it "converts 0"
   end
+
+  context "multipled digits" do
+    it "converts 12"
+    it "converts 34"
+    it "converts 567"
+    it "converts 7890"
+  end
 end
