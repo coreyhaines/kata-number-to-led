@@ -1,0 +1,41 @@
+From 40d25f3cae064f99dbef17c05de10d7f401811f4 Mon Sep 17 00:00:00 2001
+From: Corey Haines <coreyhaines@gmail.com>
+Date: Sun, 4 Oct 2009 13:01:04 -0500
+Subject: 3
+
+---
+ lib/number_to_lcd.rb       |    3 ++-
+ spec/number_to_lcd_spec.rb |    3 +++
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+diff --git a/lib/number_to_lcd.rb b/lib/number_to_lcd.rb
+index 49740d83acaf475771f9fc8b22bf474c2b101177..0b82f8fe8aef763cc8bbf90d69c0aaf521666b7c 100644
+--- a/lib/number_to_lcd.rb
++++ b/lib/number_to_lcd.rb
+@@ -3,7 +3,8 @@ class NumberToLcd
+ 
+     LINES_FOR = {
+       1 => [:blank, :right, :blank, :right, :blank],
+-      2 => [:middle, :right, :middle, :left, :middle]
++      2 => [:middle, :right, :middle, :left, :middle],
++      3 => [:middle, :right, :middle, :right, :middle]
+     }
+     def convert(this_number)
+       lines = LINES_FOR[this_number]
+diff --git a/spec/number_to_lcd_spec.rb b/spec/number_to_lcd_spec.rb
+index d503172959b90a8c17df2895d7749030e275ef88..26c6b0adfac52ed824569f5156b1c9a1dd7a3b21 100644
+--- a/spec/number_to_lcd_spec.rb
++++ b/spec/number_to_lcd_spec.rb
+@@ -9,6 +9,9 @@ describe NumberToLcd do
+       it "converts 2" do
+         NumberToLcd.convert(2).should == " - \n  |\n - \n|  \n - "
+       end
++      it "converts 3" do
++        NumberToLcd.convert(3).should == " - \n  |\n - \n  |\n - "
++      end
+     end
+   end
+ end
+-- 
+1.5.6.2
+
