@@ -10,6 +10,7 @@ Feature: Generating LCD representation for single numbers
       |
        
     """
+
   Scenario: Number 2
     When I convert the number "2" to LCD
     Then I should get the following representation
