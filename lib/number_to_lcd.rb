@@ -3,7 +3,8 @@ class NumberToLcd
 
     LINES_FOR = {
       1 => [:blank, :right, :blank, :right, :blank],
-      2 => [:middle, :right, :middle, :left, :middle]
+      2 => [:middle, :right, :middle, :left, :middle],
+      3 => [:middle, :right, :middle, :right, :middle]
     }
     def convert(this_number)
       lines = LINES_FOR[this_number]
