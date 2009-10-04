@@ -1,15 +1,21 @@
 class NumberToLcd
   class << self
+
+    LINES_FOR = {
+      1 => [:blank, :right, :blank, :right, :blank],
+      2 => [:middle, :right, :middle, :left, :middle]
+    }
     def convert(this_number)
-      if this_number == 1
-        [:blank, :right, :blank, :right, :blank]
-      else
-        [:middle, :right, :middle, :left, :middle]
-      end.map do |line_type|
-        send(line_type)
-      end.join("\n")
+      lines = LINES_FOR[this_number]
+      lines_to_strings(lines).join("\n")
     end
     
+    def lines_to_strings(lines)
+      lines.map do |line_type|
+        send(line_type)
+      end
+    end
+
     { :blank  => "   ",
       :left   => "|  ",
       :right  => "  |",
