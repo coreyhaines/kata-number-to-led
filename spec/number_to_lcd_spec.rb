@@ -1,18 +1,39 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe NumberToLcd
-  context "no scaling"
-    context "single digits"
-      it "convert 1"
-      it "converts 2"
-      it "converts 3"
-      it "converts 4"
-      it "converts 5"
-      it "converts 6"
-      it "converts 7"
-      it "converts 8"
-      it "converts 9"
-      it "converts 0"
+describe NumberToLcd do
+  context "no scaling" do
+    context "single digits" do
+      it "convert 1" do
+        NumberToLcd.convert(1).should == "   \n  |\n   \n  |\n   "
+      end
+      it "converts 2" do
+        NumberToLcd.convert(2).should == " - \n  |\n - \n|  \n - "
+      end
+      it "converts 3" do
+        NumberToLcd.convert(3).should == " - \n  |\n - \n  |\n - "
+      end
+      it "converts 4" do
+        NumberToLcd.convert(4).should == "   \n| |\n - \n  |\n   "
+      end
+      it "converts 5" do
+        NumberToLcd.convert(5).should == " - \n|  \n - \n  |\n - "
+      end
+      it "converts 6" do
+        NumberToLcd.convert(6).should == " - \n|  \n - \n| |\n - "
+      end
+      it "converts 7" do
+        NumberToLcd.convert(7).should == " - \n  |\n   \n  |\n   "
+      end
+      it "converts 8" do
+        NumberToLcd.convert(8).should == " - \n| |\n - \n| |\n - "
+      end
+      it "converts 9" do
+        NumberToLcd.convert(9).should == " - \n| |\n - \n  |\n - "
+      end
+      it "converts 0" do
+        NumberToLcd.convert(0).should == " - \n| |\n   \n| |\n - "
+      end
+
     end
   end
 end
