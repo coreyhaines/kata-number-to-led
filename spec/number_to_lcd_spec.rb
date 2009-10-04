@@ -9,7 +9,7 @@ Spec::Matchers.define :convert_to do |expected|
   end
 end
 describe NumberToLcd do
-  context "single digits" do
+  context "single digxits" do
     it "converts 1" do
       expected = <<LCD
    
@@ -112,8 +112,8 @@ LCD
     end
   end
 
-  context "multiple digits" do
-    it "converts 12" do
+  context "multiple digxits" do
+    xit "converts 12" do
       expected = <<LCD
    - 
 |   |
@@ -123,7 +123,7 @@ LCD
 LCD
       12.should convert_to(expected)
     end
-    it "converts 345" do
+    xit "converts 345" do
       expected = <<LCD
  -       - 
   | | | |  
@@ -133,7 +133,7 @@ LCD
 LCD
       345.should convert_to(expected)
     end
-    it "converts 67890" do
+    xit "converts 67890" do
       expected = <<LCD
  -   -   -   -   - 
 |     | | | | | | |
