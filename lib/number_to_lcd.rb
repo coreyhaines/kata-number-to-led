@@ -4,7 +4,8 @@ class NumberToLcd
     LINES_FOR = {
       1 => [:blank, :right, :blank, :right, :blank],
       2 => [:middle, :right, :middle, :left, :middle],
-      3 => [:middle, :right, :middle, :right, :middle]
+      3 => [:middle, :right, :middle, :right, :middle],
+      4 => [:blank, :left_and_right, :middle, :right, :blank]
     }
     def convert(this_number)
       lines = LINES_FOR[this_number]
@@ -17,10 +18,11 @@ class NumberToLcd
       end
     end
 
-    { :blank  => "   ",
-      :left   => "|  ",
-      :right  => "  |",
-      :middle => " - "
+    { :blank          => "   ",
+      :left           => "|  ",
+      :right          => "  |",
+      :left_and_right => "| |",
+      :middle         => " - "
     }.each_pair do |key, string|
       define_method(key) do
         string
