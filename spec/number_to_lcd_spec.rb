@@ -27,6 +27,9 @@ describe NumberToLcd do
       it "converts 8" do
         NumberToLcd.convert(8).should == " - \n| |\n - \n| |\n - "
       end
+      it "converts 9" do
+        NumberToLcd.convert(9).should == " - \n| |\n - \n  |\n - "
+      end
 
     end
   end
