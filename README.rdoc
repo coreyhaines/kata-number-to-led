@@ -9,7 +9,7 @@ There are 4 main branches:
   This is a list of pending rspec examples
 * specs
   This is a list of implemented rspec examples
-* implementation
+* reference_implementation
   This is a reference implementation of the algorithm.
 
 == How to use this
