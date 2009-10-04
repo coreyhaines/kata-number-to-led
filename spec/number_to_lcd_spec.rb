@@ -13,20 +13,34 @@ describe NumberToLcd do
   end
   context "single digits" do
     it "converts 1" do
-      expected = <<EOF
+      expected = <<LCD
    
   |
    
   |
    
-EOF
+LCD
       1.should convert_to(expected)
     end
     it "converts 2" do
-      NumberToLcd.convert(2).should == " - \n  |\n - \n|  \n - "
+      expected = <<LCD
+ - 
+  |
+ - 
+|  
+ - 
+LCD
+      2.should convert_to(expected)
     end
     it "converts 3" do
-      NumberToLcd.convert(3).should == " - \n  |\n - \n  |\n - "
+      expected = <<LCD
+ - 
+  |
+ - 
+  |
+ - 
+LCD
+      3.should convert_to(expected)
     end
     it "converts 4" do
       NumberToLcd.convert(4).should == "   \n| |\n - \n  |\n   "
