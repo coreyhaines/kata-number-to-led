@@ -9,8 +9,8 @@ Spec::Matchers.define :convert_to do |expected|
   end
 end
 describe NumberToLcd do
-  context "single digits" do
-    it "converts 1" do
+  context "single digxits" do
+    xit "converts 1" do
       expected = <<LCD
    
   |
@@ -20,7 +20,7 @@ describe NumberToLcd do
 LCD
       1.should convert_to(expected)
     end
-    it "converts 2" do
+    xit "converts 2" do
       expected = <<LCD
  - 
   |
@@ -30,7 +30,7 @@ LCD
 LCD
       2.should convert_to(expected)
     end
-    it "converts 3" do
+    xit "converts 3" do
       expected = <<LCD
  - 
   |
@@ -40,7 +40,7 @@ LCD
 LCD
       3.should convert_to(expected)
     end
-    it "converts 4" do
+    xit "converts 4" do
       expected = <<LCD
    
 | |
@@ -50,7 +50,7 @@ LCD
 LCD
       4.should convert_to(expected)
     end
-    it "converts 5" do
+    xit "converts 5" do
       expected = <<LCD
  - 
 |  
@@ -60,7 +60,7 @@ LCD
 LCD
       5.should convert_to(expected)
     end
-    it "converts 6" do
+    xit "converts 6" do
       expected = <<LCD
  - 
 |  
@@ -70,7 +70,7 @@ LCD
 LCD
       6.should convert_to(expected)
     end
-    it "converts 7" do
+    xit "converts 7" do
       expected = <<LCD
  - 
   |
@@ -80,7 +80,7 @@ LCD
 LCD
       7.should convert_to(expected)
     end
-    it "converts 8" do
+    xit "converts 8" do
       expected = <<LCD
  - 
 | |
@@ -90,7 +90,7 @@ LCD
 LCD
       8.should convert_to(expected)
     end
-    it "converts 9" do
+    xit "converts 9" do
       expected = <<LCD
  - 
 | |
@@ -100,7 +100,7 @@ LCD
 LCD
       9.should convert_to(expected)
     end
-    it "converts 0" do
+    xit "converts 0" do
       expected = <<LCD
  - 
 | |
@@ -112,8 +112,8 @@ LCD
     end
   end
 
-  context "multiple digits" do
-    it "converts 12" do
+  context "multiple digxits" do
+    xit "converts 12" do
       expected = <<LCD
    - 
 |   |
@@ -123,7 +123,7 @@ LCD
 LCD
       12.should convert_to(expected)
     end
-    it "converts 345" do
+    xit "converts 345" do
       expected = <<LCD
  -       - 
   | | | |  
@@ -133,7 +133,7 @@ LCD
 LCD
       345.should convert_to(expected)
     end
-    it "converts 67890" do
+    xit "converts 67890" do
       expected = <<LCD
  -   -   -   -   - 
 |     | | | | | | |
