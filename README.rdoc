@@ -1,9 +1,34 @@
-= number_to_lcd
+= Kata repository for Number To LCD
 
-Description goes here.
+This is a repository that can be used as a starting point for doing the Number To LCD code kata. It is based on Ruby Quiz #14 (http://rubyquiz.com/quiz14.html).
+
+There are 4 main branches:
+* master
+  This is a set of cucumber features
+* spec_list
+  This is a list of pending rspec examples
+* specs
+  This is a list of implemented rspec examples
+* implementation
+  This is a reference implementation of the algorithm.
+
+== How to use this
+
+Please fork this repository and work on this kata as a way to practice. There are 3 different ways that I recommend using this repository:
+
+* Writing implementation code
+  Create a branch based on the existing 'specs' branch, add your own implementation
+  for the given specs.
+* Writing examples
+  Create a branch based on the existing 'spec_list' branch, add your own examples
+  for the given descriptions.
+* Writing example descriptions
+  Create a branch based on the existing 'master' branch, add your own examples
+  for the given cucumber scenarios.
 
 == Note on Patches/Pull Requests
  
+If you notice anything wrong, please follow the instructions below to contribute your ideas / fixes:
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
@@ -11,7 +36,7 @@ Description goes here.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but
    bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* Send me a pull request.
 
 == Copyright
 
