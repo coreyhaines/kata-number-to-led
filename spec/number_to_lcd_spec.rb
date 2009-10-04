@@ -36,13 +36,6 @@ describe NumberToLcd do
     end
   end
 
-  context "multipled digits" do
-    it "converts 12"
-    it "converts 34"
-    it "converts 567"
-    it "converts 7890"
-  end
-
   context "multiple digits" do
     it "converts 12"
     it "converts 34"
