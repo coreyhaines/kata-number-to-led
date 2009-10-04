@@ -8,7 +8,7 @@ Feature: Generating LCD representation for single numbers
       |
 
       |
-    
+       
     """
   Scenario: Number 2
     When I convert "2" to LCD
@@ -40,7 +40,7 @@ Feature: Generating LCD representation for single numbers
     | |
      -
       |
-
+       
     """
 
   Scenario: Number 5
@@ -71,8 +71,9 @@ Feature: Generating LCD representation for single numbers
     """
      -
       |
-      |
 
+      |
+       
     """
 
   Scenario: Number 8
