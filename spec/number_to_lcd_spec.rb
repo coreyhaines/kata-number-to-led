@@ -30,6 +30,9 @@ describe NumberToLcd do
       it "converts 9" do
         NumberToLcd.convert(9).should == " - \n| |\n - \n  |\n - "
       end
+      it "converts 0" do
+        NumberToLcd.convert(0).should == " - \n| |\n   \n| |\n - "
+      end
 
     end
   end
