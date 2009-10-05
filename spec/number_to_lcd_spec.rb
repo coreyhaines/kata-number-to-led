@@ -112,7 +112,7 @@ LCD
     end
   end
 
-  context "multiple digxits" do
+  context "multiple digits" do
     xit "converts 12" do
       expected = <<LCD
    - 
