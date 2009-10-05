@@ -1,14 +1,26 @@
 class NumberToLcd
   class << self
     def convert(this_number)
-      digits = this_number.to_s.split('')
-      lines_for_digits = digits.map { |digit| lines_for(digit) }
-      strings_for_lines = lines_for_digits.map { |line_type| lines_to_strings(line_type) }
+      digits = digits_for(this_number)
+      lines_for_digits = lines_for_these(digits)
+      strings_for_lines = strings_for_these(lines_for_digits)
       lines = strings_for_lines.transpose
-      full_lines = lines.map { |line| line.join(' ') }
+      full_lines = combine(lines)
       full_lines.join("\n")
     end
 
+    def combine(lines)
+      lines.map { |line| line.join(' ') }
+    end
+    def strings_for_these(lines)
+      lines.map { |line_type| lines_to_strings(line_type) }
+    end
+    def lines_for_these(digits)
+      digits.map { |digit| lines_for(digit) }
+    end
+    def digits_for(number)
+      number.to_s.split('')
+    end
     def lines_for(this_number)
       LINES_FOR[this_number.to_s]
     end
