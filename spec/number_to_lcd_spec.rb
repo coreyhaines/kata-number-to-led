@@ -113,17 +113,17 @@ LCD
   end
 
   context "multiple digxits" do
-    xit "converts 12" do
+    it "converts 12" do
       expected = <<LCD
-   - 
-|   |
-   - 
-| |  
-   - 
+     - 
+  |   |
+     - 
+  | |  
+     - 
 LCD
       12.should convert_to(expected)
     end
-    xit "converts 345" do
+    it "converts 345" do
       expected = <<LCD
  -       - 
   | | | |  
@@ -133,7 +133,7 @@ LCD
 LCD
       345.should convert_to(expected)
     end
-    xit "converts 67890" do
+    it "converts 67890" do
       expected = <<LCD
  -   -   -   -   - 
 |     | | | | | | |
