@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'number_to_lcd'
 
 Spec::Matchers.define :convert_to do |expected|
   match do |actual|
@@ -9,137 +9,137 @@ Spec::Matchers.define :convert_to do |expected|
   end
 end
 describe NumberToLcd do
-  context "single digxits" do
-    it "converts 1" do
+  context "single digits" do
+    xit "converts 1" do
       expected = <<LCD
-   
+
   |
-   
+
   |
-   
+
 LCD
       1.should convert_to(expected)
     end
-    it "converts 2" do
+    xit "converts 2" do
       expected = <<LCD
- - 
+ -
   |
- - 
-|  
- - 
+ -
+|
+ -
 LCD
       2.should convert_to(expected)
     end
-    it "converts 3" do
+    xit "converts 3" do
       expected = <<LCD
- - 
+ -
   |
- - 
+ -
   |
- - 
+ -
 LCD
       3.should convert_to(expected)
     end
-    it "converts 4" do
+    xit "converts 4" do
       expected = <<LCD
-   
+
 | |
- - 
+ -
   |
-   
+
 LCD
       4.should convert_to(expected)
     end
-    it "converts 5" do
+    xit "converts 5" do
       expected = <<LCD
- - 
-|  
- - 
+ -
+|
+ -
   |
- - 
+ -
 LCD
       5.should convert_to(expected)
     end
-    it "converts 6" do
+    xit "converts 6" do
       expected = <<LCD
- - 
-|  
- - 
+ -
+|
+ -
 | |
- - 
+ -
 LCD
       6.should convert_to(expected)
     end
-    it "converts 7" do
+    xit "converts 7" do
       expected = <<LCD
- - 
+ -
   |
-   
+
   |
-   
+
 LCD
       7.should convert_to(expected)
     end
-    it "converts 8" do
+    xit "converts 8" do
       expected = <<LCD
- - 
+ -
 | |
- - 
+ -
 | |
- - 
+ -
 LCD
       8.should convert_to(expected)
     end
-    it "converts 9" do
+    xit "converts 9" do
       expected = <<LCD
- - 
+ -
 | |
- - 
+ -
   |
- - 
+ -
 LCD
       9.should convert_to(expected)
     end
-    it "converts 0" do
+    xit "converts 0" do
       expected = <<LCD
- - 
+ -
 | |
-   
+
 | |
- - 
+ -
 LCD
       0.should convert_to(expected)
     end
   end
 
-  context "multiple digxits" do
-    it "converts 12" do
+  context "multiple digits" do
+    xit "converts 12" do
       expected = <<LCD
-     - 
+     -
   |   |
-     - 
-  | |  
-     - 
+     -
+  | |
+     -
 LCD
       12.should convert_to(expected)
     end
-    it "converts 345" do
+    xit "converts 345" do
       expected = <<LCD
- -       - 
-  | | | |  
- -   -   - 
+ -       -
+  | | | |
+ -   -   -
   |   |   |
- -       - 
+ -       -
 LCD
       345.should convert_to(expected)
     end
-    it "converts 67890" do
+    xit "converts 67890" do
       expected = <<LCD
- -   -   -   -   - 
+ -   -   -   -   -
 |     | | | | | | |
- -       -   -     
+ -       -   -
 | |   | | |   | | |
- -       -   -   - 
+ -       -   -   -
 LCD
       67890.should convert_to(expected)
     end
