@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'number_to_lcd'
 
 Spec::Matchers.define :convert_to do |expected|
   match do |actual|
