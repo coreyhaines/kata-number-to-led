@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'number_to_lcd'
 
 describe NumberToLcd do
   context "single digits" do
